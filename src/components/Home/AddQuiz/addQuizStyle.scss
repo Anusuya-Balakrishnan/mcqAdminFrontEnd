@@ -1,0 +1,78 @@
+
+@use "../../../variables" as *;
+
+.addQuizPage{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.214);
+    .addQuizContainer{
+        position: relative;
+        width: 350px;
+        height: 350px;
+        background-color: rgb(255, 255, 255);
+        // border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:$newBg_color;
+    .closeBtn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        color:white;
+        font-size: 25px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover{
+//             transform-origin: center center; /* Set rotation point to the center */
+//   animation: rotateAnimation 3s linear ; /* Apply rotation animation */
+            // transform: rotate(45deg); /* Rotate the element 45 degrees clockwise on hover */
+            cursor: pointer;
+
+        }
+    }
+
+    .addQuizContainerTitle{
+        color:white;
+        font-size: 22px;
+    }
+    .addQuizForm{
+        width: 100%;
+        height: auto;
+        margin-top:30px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .textInput{
+        width: 80%;
+        background-color: white;
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        // margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    }
+    }
+}
+
+@keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg); /* Initial rotation angle */
+    }
+    100% {
+      transform: rotate(360deg); /* Final rotation angle (360 degrees for full rotation) */
+    }
+}

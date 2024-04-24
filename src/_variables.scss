@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+$plain-background:#f0f0f0;
+$newPlainBg:rgb(240,242,246);
+$newBg_color:#072c50;
+$background-color:radial-gradient(#2190F5,#0A489C);
+$button-color:#2D81F7;
+$form-background:#e9f0fa;
+$form-text-color:rgb(126, 126, 126);
+$answeredButton:#4ACD08;
+$notVisitedButton:#FFFFFF;
+$notAnsweredButton:#EC4E04;
+$ashColor:#B3B3B3;
+$greenColor:#17CA53;
+$redColor:#FF6868;
+$leaderBoardBgColor:rgb(240,242,246);
+$newBtn:#4CA2F9;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+.element{
+    padding: 10px 20px;
+    background-color: $newBtn;
+    border-radius: 10px;
+    margin: 20px 10px;
+    border: none;
+color:white;
+transition: 0.5s;
+&:hover{
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+}
+.contentElement{
+    padding: 10px 20px;
+    background-color: $newBtn;
+    border-radius: 10px;
+    margin: 20px 10px;
+    border: none;
+    min-width: 250px;
+    // width:200px;
+    width: auto;
+    // display: block;
+color:white;
+transition: 0.5s;
+font-size: 18px;
+cursor: pointer;
+&:hover{
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+}
+.plusBtn{
+    width: 200px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: $newBtn;
+    border-radius: 10px;
+    margin: 20px 10px;
+    border: none;
+color:white;
+transition: 0.5s;
+text-align: center;
+&:hover{
+   
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+}
+
+@media(max-width:500px){
+    .element{
+        width: 100px;
+    }
+  
+}
+
+.popupOverlay{
+    position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+// background-color: rgba(0, 0, 0, 0.7);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+}
+
+.popupOverlay > * {
+z-index: 1001;
+}

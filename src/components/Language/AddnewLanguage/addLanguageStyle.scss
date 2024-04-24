@@ -1,0 +1,33 @@
+@use "../../../variables" as *;
+
+.languageBox{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .languagePageTitle{
+        font-size: 25px;
+    }
+    .languageContainer{
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        flex-direction: column;
+
+        .eachLanguage{
+            width: auto;
+            display: flex;
+            flex-wrap: wrap;
+            .languageName{
+                min-width: 250px;
+                width: auto;
+
+            }
+        }
+    }
+}
