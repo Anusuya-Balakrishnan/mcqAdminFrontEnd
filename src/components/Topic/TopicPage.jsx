@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useContext, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./topicStyle.css";
 import AddTopic from "./AddTopic/AddTopic";
@@ -11,13 +11,19 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import UpdateTopic from "./UpdateTopic/UpdateTopic";
+import MyContext from "../../MyContext";
 function TopicPage(props) {
   const apiUrl = process.env.REACT_APP_API_URL;
+  const { setTopicName } = useContext(MyContext);
   const { languageId } = useParams();
   const [topicList, setTopicList] = useState([]);
+  const navigate = useNavigate();
 
+  const [updateTopicPopUp, setUpdateTopicPopUp] = useState(false);
   const [addTopicPopUp, setAddTopicPopUp] = useState(false);
 
+  const [updateTopicId, setUpdateTopicId] = useState();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,7 +38,7 @@ function TopicPage(props) {
     };
 
     fetchData(); // Call the async function immediately
-  }, []);
+  }, [topicList]);
 
   // delete dialog box
   const [openDeleteDialog, setOpenDeleteDialog] = useState(false);
@@ -88,8 +94,33 @@ function TopicPage(props) {
         {topicList.map((item, index) => {
           return (
             <div className="eachTopicContainer" key={index}>
-              <div className="contentElement element">{item.topicName}</div>
-              <button className="element">Edit</button>
+              <div
+                className="contentElement element"
+                onClick={() => {
+                  setTopicName(item.topicName);
+                  navigate(`/questions/${item.id}`);
+                }}
+              >
+                {item.topicName}
+              </div>
+              <button
+                className="element"
+                onClick={() => {
+                  setUpdateTopicPopUp((prevState) => !prevState);
+                  setUpdateTopicId(item.id);
+                }}
+              >
+                Edit
+              </button>
+              {updateTopicPopUp && (
+                <div className="popupOverlay">
+                  <UpdateTopic
+                    onClose={() => setUpdateTopicPopUp(false)}
+                    languageId={languageId}
+                    updateTopicId={updateTopicId}
+                  />
+                </div>
+              )}
               <button
                 className="element"
                 onClick={() => handleDeleteConfirmation(item.id)}

@@ -1,0 +1,41 @@
+@use "../../variables" as *;
+
+.questionPage_container{
+    width: 100%;
+    height: 100%;
+    // background-color: aquamarine;
+    .questionPage_title{
+        font-size: 22px;
+        padding: 20px;
+        
+    }
+    .questionPage_body{
+        width: 100%;
+        height: auto;
+        .each_question_container{
+            padding: 10px;
+            .questionOnly{
+                .questionName{
+                    // background-color: aqua;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .questionCode{
+                    max-width: 400px;
+                    width: auto;
+                }
+                .questionOption{
+                    padding: 20px;
+                    // list-style-type: disc;
+
+                }
+                .questionsAnswer{
+                    padding: 10px 0;
+                    span{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

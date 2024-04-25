@@ -9,6 +9,7 @@ import "../../Home/AddQuiz/addQuizStyle.css";
 function AddTopic({ onClose, languageId }) {
   const apiUrl = process.env.REACT_APP_API_URL;
   const [newTopicName, setNewTopicName] = useState("");
+
   const submitFunction = async (e) => {
     e.preventDefault();
     try {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Button from "@mui/material/Button";
@@ -12,12 +12,14 @@ import "./addLanguageStyle.css";
 import AddLanguage from "./AddLanguage/AddLanguage";
 import UpdateLanguage from "../UpdateLanguage/UpdateLanguage";
 import { useNavigate } from "react-router-dom";
+import MyContext from "../../../MyContext";
 function AddNewLanguage() {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { mcqId } = useParams();
   const [languageList, setLanguageList] = useState([]);
   const navigate = useNavigate();
 
+  const { setLanguageName } = useContext(MyContext);
   const [addnewLanugagePopUp, setAddnewLanugagePopUp] = useState(false);
   const [updateLanugagePopUp, setupdateLanugagePopUp] = useState(false);
   const [languageId, setLanguageId] = useState();
@@ -92,6 +94,7 @@ function AddNewLanguage() {
               <p
                 className="contentElement element"
                 onClick={() => {
+                  setLanguageName(item.languageName);
                   navigate(`/topic/${item.id}`);
                 }}
               >
