@@ -1,0 +1,17 @@
+@use "../../variables" as *;
+
+.navbar_container{
+    height: 80px;
+    width: 100%;
+    background-color: $button-color;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 0 50px;
+    .navbar_title{
+        font-size: 25px;
+    }
+}

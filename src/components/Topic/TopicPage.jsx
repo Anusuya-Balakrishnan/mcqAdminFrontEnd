@@ -15,7 +15,7 @@ import UpdateTopic from "./UpdateTopic/UpdateTopic";
 import MyContext from "../../MyContext";
 function TopicPage(props) {
   const apiUrl = process.env.REACT_APP_API_URL;
-  const { setTopicName } = useContext(MyContext);
+  const { assignTopicName } = useContext(MyContext);
   const { languageId } = useParams();
   const [topicList, setTopicList] = useState([]);
   const navigate = useNavigate();
@@ -97,7 +97,7 @@ function TopicPage(props) {
               <div
                 className="contentElement element"
                 onClick={() => {
-                  setTopicName(item.topicName);
+                  assignTopicName(item.topicName);
                   navigate(`/questions/${item.id}`);
                 }}
               >

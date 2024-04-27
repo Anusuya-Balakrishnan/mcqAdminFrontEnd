@@ -74,37 +74,18 @@
   z-index: 1001;
 }
 
-.questionPage_container {
-  margin-top: 80px;
-  padding-left: 80px;
+.navbar_container {
+  height: 80px;
   width: 100%;
-  height: 100%;
+  background-color: #2D81F7;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 50px;
 }
-.questionPage_container .questionPage_title {
-  font-size: 22px;
-  padding: 20px;
-}
-.questionPage_container .questionPage_body {
-  width: 100%;
-  height: auto;
-}
-.questionPage_container .questionPage_body .each_question_container {
-  padding: 10px;
-}
-.questionPage_container .questionPage_body .each_question_container .questionOnly .questionName {
-  font-size: 20px;
-  font-weight: 600;
-}
-.questionPage_container .questionPage_body .each_question_container .questionOnly .questionCode {
-  max-width: 400px;
-  width: auto;
-}
-.questionPage_container .questionPage_body .each_question_container .questionOnly .questionOption {
-  padding: 20px;
-}
-.questionPage_container .questionPage_body .each_question_container .questionOnly .questionsAnswer {
-  padding: 10px 0;
-}
-.questionPage_container .questionPage_body .each_question_container .questionOnly .questionsAnswer span {
-  font-weight: 600;
-}/*# sourceMappingURL=questionStyle.css.map */
+.navbar_container .navbar_title {
+  font-size: 25px;
+}/*# sourceMappingURL=navbarStyle.css.map */

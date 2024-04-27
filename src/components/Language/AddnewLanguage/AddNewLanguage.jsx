@@ -19,10 +19,11 @@ function AddNewLanguage() {
   const [languageList, setLanguageList] = useState([]);
   const navigate = useNavigate();
 
-  const { setLanguageName } = useContext(MyContext);
+  const { language, assignLanguage } = useContext(MyContext);
   const [addnewLanugagePopUp, setAddnewLanugagePopUp] = useState(false);
   const [updateLanugagePopUp, setupdateLanugagePopUp] = useState(false);
   const [languageId, setLanguageId] = useState();
+
   // getting data from backend
   useEffect(() => {
     const fetchData = async () => {
@@ -94,7 +95,10 @@ function AddNewLanguage() {
               <p
                 className="contentElement element"
                 onClick={() => {
-                  setLanguageName(item.languageName);
+                  assignLanguage({
+                    languageName: item.languageName,
+                    languageId: item.id,
+                  });
                   navigate(`/topic/${item.id}`);
                 }}
               >

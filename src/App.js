@@ -10,13 +10,29 @@ import AddNewLanguage from "./components/Language/AddnewLanguage/AddNewLanguage"
 import TopicPage from "./components/Topic/TopicPage";
 import QuestionPage from "./components/Questions/QuestionPage";
 import MyContext from "./MyContext";
+import Navbar from "./components/Navbar/Navbar";
 function App() {
-  const [languageName, setLanguageName] = useState("");
+  const [language, setLanguage] = useState({});
   const [topicName, setTopicName] = useState("");
+  const [langId, setLangId] = useState();
+
+  function assignLanguage(value) {
+    setLanguage(value);
+  }
+  function assignTopicName(value) {
+    setTopicName(value);
+  }
+
   return (
     <div className="App">
+      <Navbar />
       <MyContext.Provider
-        data={{ languageName, topicName, setLanguageName, setTopicName }}
+        value={{
+          language,
+          topicName,
+          assignLanguage,
+          assignTopicName,
+        }}
       >
         <BrowserRouter>
           <Routes>
