@@ -44,7 +44,7 @@ function AddLanguage({ onClose, mcqId }) {
         <form onSubmit={submitFunction} className="addQuizForm">
           <input
             type="text"
-            placeholder="Enter new Quiz Name"
+            placeholder="Enter new Language Name"
             className="textInput"
             onChange={(e) => {
               setNewlanguageName(

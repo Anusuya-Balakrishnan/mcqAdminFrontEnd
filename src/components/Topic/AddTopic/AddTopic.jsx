@@ -47,7 +47,7 @@ function AddTopic({ onClose, languageId }) {
         <form onSubmit={submitFunction} className="addQuizForm">
           <input
             type="text"
-            placeholder="Enter new Topic"
+            placeholder="Enter new Topic Name"
             className="textInput"
             onChange={(e) => {
               setNewTopicName(

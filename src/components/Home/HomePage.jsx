@@ -90,7 +90,7 @@ function HomePage() {
       {/* <Navbar /> */}
       <section className="adminHomePage">
         <div className="homePage_title">
-          We can Add, Update and Delete Quizzes
+          Managing Quizzes: Adding, Updating, and Deleting
         </div>
         <div className="homePage_existing_quiz_list">
           {quiz_list.map((item, index) => {

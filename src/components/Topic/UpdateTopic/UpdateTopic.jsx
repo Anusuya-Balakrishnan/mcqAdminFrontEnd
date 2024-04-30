@@ -41,11 +41,11 @@ function UpdateTopic({ onClose, languageId, updateTopicId }) {
         <div className="closeBtn" onClick={() => onClose()}>
           <IoMdClose />
         </div>
-        <div className="addQuizContainerTitle">Edit Language</div>
+        <div className="addQuizContainerTitle">Edit Topic</div>
         <form onSubmit={submitFunction} className="addQuizForm">
           <input
             type="text"
-            placeholder="Enter new Quiz Name"
+            placeholder="Enter Topic Name"
             className="textInput"
             onChange={(e) => {
               setnewTopicName(

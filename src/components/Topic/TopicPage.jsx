@@ -89,7 +89,9 @@ function TopicPage(props) {
 
   return (
     <div className="topicContainer">
-      <div className="topicContainer_Title">Add New Topics</div>
+      <div className="topicContainer_Title">
+        Topic Management: Adding, Updating, and Removing
+      </div>
       <div className="totalTopicContainer">
         {topicList.map((item, index) => {
           return (
@@ -170,7 +172,7 @@ function TopicPage(props) {
         <DialogTitle id="alert-dialog-title">{"Delete Quiz"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Are you sure you want to delete this quiz ?
+            Are you sure you want to delete this topic ?
           </DialogContentText>
         </DialogContent>
         <DialogActions>

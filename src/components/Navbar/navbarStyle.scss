@@ -11,7 +11,16 @@
     align-items: center;
     color:white;
     padding: 0 50px;
+    img{
+        width: 12%;
+        height: auto;
+    }
     .navbar_title{
-        font-size: 25px;
+        
+        Button{
+            color:white;
+            font-size: 22px;
+            text-transform: capitalize;
+        }
     }
 }

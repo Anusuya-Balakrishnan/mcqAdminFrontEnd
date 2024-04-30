@@ -86,6 +86,12 @@
   color: white;
   padding: 0 50px;
 }
-.navbar_container .navbar_title {
-  font-size: 25px;
+.navbar_container img {
+  width: 12%;
+  height: auto;
+}
+.navbar_container .navbar_title Button {
+  color: white;
+  font-size: 22px;
+  text-transform: capitalize;
 }/*# sourceMappingURL=navbarStyle.css.map */

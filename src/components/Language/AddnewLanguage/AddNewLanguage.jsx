@@ -87,7 +87,9 @@ function AddNewLanguage() {
 
   return (
     <div className="languageBox">
-      <div className="languagePageTitle">Add New Language</div>
+      <div className="languagePageTitle">
+        Language Management: Adding, Updating, and Removing
+      </div>
       <div className="languageContainer">
         {languageList.map((item, index) => {
           return (
@@ -159,7 +161,7 @@ function AddNewLanguage() {
         <DialogTitle id="alert-dialog-title">{"Delete Quiz"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Are you sure you want to delete this quiz ?
+            Are you sure you want to delete this Language ?
           </DialogContentText>
         </DialogContent>
         <DialogActions>

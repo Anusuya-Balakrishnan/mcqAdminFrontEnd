@@ -45,7 +45,7 @@ function UpdateLanguage({ onClose, mcqId, updateLanguageId }) {
         <form onSubmit={submitFunction} className="addQuizForm">
           <input
             type="text"
-            placeholder="Enter new Quiz Name"
+            placeholder="Enter language Name"
             className="textInput"
             onChange={(e) => {
               setNewlanguageName(

@@ -85,6 +85,7 @@ function AddQuestion({ onClose, topicId }) {
             onChange={(e) => {
               setCode(e.target.value);
             }}
+            style={{ height: `${code && "150px"}` }}
             value={code}
           />
           <input
